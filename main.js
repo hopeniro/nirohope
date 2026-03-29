@@ -124,7 +124,6 @@ new GLTFLoader().load('3d models/computer.glb', (gltf) => {
     compScene.add(pcModel);
 });
 
-// --- SKILLS CANVAS ---
 const skContainer = document.getElementById('canvas-container');
 const skScene = new THREE.Scene();
 const skCamera = new THREE.PerspectiveCamera(40, skContainer.clientWidth / skContainer.clientHeight, 0.1, 1000);
@@ -198,7 +197,6 @@ document.addEventListener('touchmove', (e) => skMove(e.touches[0].clientX, e.tou
 document.addEventListener('mouseup', () => { skIsDragging = false; skSelectedModel = null; });
 document.addEventListener('touchend', () => { skIsDragging = false; skSelectedModel = null; });
 
-// --- EXPERIENCE JOURNEY ---
 const jContainer = document.getElementById('journey-3d-container');
 const jScene = new THREE.Scene();
 const jCamera = new THREE.PerspectiveCamera(40, jContainer.clientWidth / jContainer.clientHeight, 0.1, 1000);
@@ -304,7 +302,6 @@ function initHeartGlitter() {
     hAnim();
 }
 
-// Form Handler
 const contactForm = document.getElementById('myContactForm');
 if(contactForm) {
     contactForm.addEventListener('submit', async (e) => {
@@ -365,7 +362,6 @@ function animate() {
         compRenderer.render(compScene, compCamera);
     }
 
-    // Skills Animation
     const skSec = document.getElementById('skills');
     const skProg = Math.max(0, Math.min(1, (scrollY - skSec.offsetTop) / (skSec.offsetHeight - window.innerHeight)));
     skModels.forEach((m, i) => {
@@ -382,7 +378,6 @@ function animate() {
     document.getElementById('labels').classList.toggle('active', skProg > 0.85);
     skRenderer.render(skScene, skCamera);
 
-    // Journey Fading
     for (let i = currentGallery.length - 1; i >= 0; i--) {
         const mesh = currentGallery[i];
         if (mesh.userData.fadingOut) {
