@@ -29,7 +29,6 @@ function initHeroInteractions() {
 
     setTimeout(() => document.querySelectorAll('.name-container span').forEach(s => s.classList.add('revealed')), 100);
 
-    // Desktop only mouse move effect
     const updateMousePos = (e) => {
         if (window.innerWidth > 768) {
             const rect = nameContainer.getBoundingClientRect();
@@ -50,7 +49,6 @@ function initHeroInteractions() {
 }
 initHeroInteractions();
 
-// Floating images drag logic
 const draggables = document.querySelectorAll('.float-img');
 let activeElement = null, offset = { x: 0, y: 0 };
 
@@ -105,7 +103,6 @@ compControls.enableDamping = true;
 compControls.enableZoom = false;
 
 let pcModel;
-const myPic = texLoader.load('img/me.jpg', (texture) => { texture.colorSpace = THREE.SRGBColorSpace; });
 
 new GLTFLoader().load('3d models/computer.glb', (gltf) => {
     pcModel = gltf.scene;
