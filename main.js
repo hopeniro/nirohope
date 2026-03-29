@@ -210,7 +210,7 @@ jScene.add(new THREE.AmbientLight(0xffffff, 2.8));
 
 const jCategoryAssets = [
     ['img/digital art.png'], 
-    ['img/project1.jpg', 'img/project2.jpg', 'img/project3.jpg', 'img/project4.jpg'], 
+    ['img/project1.jpg', 'img/project2.jpg'], 
     ['img/snow.png', 'img/lightroom cat.png'] 
 ];
 
