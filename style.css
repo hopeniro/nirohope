@@ -19,8 +19,6 @@ section {
     padding: 180px 5vw; 
     text-align: center; 
 }
-
-/* --- HERO SECTION --- */
 .hero-section {
     height: 100vh; width: 100%;
     display: flex; align-items: center; justify-content: center; 
@@ -42,8 +40,6 @@ section {
     animation: gentleFloat 4s ease-in-out infinite;
     touch-action: none;
 }
-
-/* --- NAME CONTAINER --- */
 .name-container {
     font-family: 'Tenor Sans';
     display: flex;
@@ -60,7 +56,6 @@ section {
     -webkit-background-clip: text;
     color: rgba(255, 255, 255, 0.2);
 }
-
 .name-container .glass-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -71,7 +66,6 @@ section {
     mask-image: radial-gradient(circle 60px at var(--x, -100%) var(--y, -100%), black 0%, transparent 100%);
     z-index: 7;
 }
-
 .name-container span {
     display: inline-block;
     transition: transform 0.3s ease;
@@ -82,8 +76,6 @@ section {
     z-index: 6;
 }
 .name-container span.revealed { opacity: 1; transform: translateY(0); }
-
-/* --- NICKNAME --- */
 .nickname-display {
     font-family: 'Tenor Sans';
     font-size: 2.5rem;
@@ -99,16 +91,13 @@ section {
     width: 0;
     animation: typing 3s steps(6, end) forwards, blink-caret 0.75s step-end infinite;
 }
-
 @keyframes typing { from { width: 0 } to { width: 180px; } }
 @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--accent); } }
 
-/* --- TITLES & SQUISH --- */
 .section-title, .contact-title { font-family:'Tenor Sans'; font-size: 2.5rem; margin-bottom: 20px; text-transform: uppercase; color: var(--accent); }
 .squish-letter { display: inline-block; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease; cursor: default; }
 .squish-letter:hover { transform: scale(1.4, 0.6) !important; color: var(--accent); }
 
-/* --- SKILLS SECTION --- */
 #skills { height: 400vh; padding: 0; background: #000; }
 .sticky-wrapper { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
 #canvas-container { width: 100%; height: 60vh; position: relative; cursor: grab; touch-action: none; }
@@ -122,7 +111,6 @@ section {
 .level { display: block; font-size: 0.6rem; color: var(--accent); text-transform: uppercase; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px; }
 .usage { font-size: 0.75rem; color: #ccc; line-height: 1.4; }
 
-/* --- COMPUTER SHOWCASE --- */
 #computer-showcase { height: 300vh; padding: 0; background: #000; }
 .computer-sticky { position: sticky; top: 0; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #000; }
 .showcase-layout { display: flex; width: 90%; max-width: 1400px; align-items: center; justify-content: flex-end; position: relative; }
@@ -132,7 +120,6 @@ section {
 .intro-text h2 { font-family: 'Tenor Sans'; font-size: 3.5rem; color: var(--accent); margin-bottom: 15px; }
 .intro-text p { font-size: 1.1rem; line-height: 1.6; opacity: 0.9; color: #fff; }
 
-/* --- EXPERIENCE JOURNEY --- */
 #experience-works { height: 100vh; padding: 0; overflow: hidden; background: #000; display: flex; align-items: center; justify-content: center; }
 .journey-layout { display: flex; width: 90%; max-width: 1400px; height: 80vh; align-items: center; justify-content: space-between; position: relative; }
 .journey-text-side { width: 35%; text-align: left; position: relative; height: 100%; display: flex; flex-direction: column; justify-content: center; z-index: 30; }
@@ -149,7 +136,6 @@ section {
 .nav-item-side.active { color: #fff; }
 .nav-item-side.active::before { width: 40px; }
 
-/* --- RAKET SHOWCASE --- */
 #raket-showcase { background: #000; padding: 150px 5vw; }
 .raket-container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; gap: 50px; }
 .mac-window { width: 45%; background: #1e1e1e; border-radius: 12px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.6); border: 1px solid #333; }
@@ -167,7 +153,6 @@ section {
 .raket-description h4 { font-family: 'Tenor Sans'; font-size: 2.2rem; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
 .raket-description p { line-height: 1.8; color: #ccc; font-size: 1.05rem; }
 
-/* --- CONTACT --- */
 #contact { padding: 150px 5vw; background: #000; }
 .contact-layout { display: flex; max-width: 1200px; margin: 0 auto; justify-content: space-between; align-items: flex-start; gap: 80px; }
 .contact-info { width: 45%; text-align: left; }
@@ -185,27 +170,21 @@ section {
 .reveal { opacity: 0; transform: translateY(30px); transition: 1s ease-out; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
-/* ============================================================
-   MOBILE VERSION (Isolating changes only for screen <= 768px)
-   ============================================================ */
 @media (max-width: 768px) {
     section { padding: 80px 20px; height: auto !important; }
 
-    /* Hero */
     .name-container { font-size: 2.2rem; flex-wrap: wrap; line-height: 1.2; padding: 10px; }
     .nickname-display { font-size: 1.6rem; }
     @keyframes typing { from { width: 0 } to { width: 120px; } }
     .float-img { width: 70px; }
     .name-container .glass-overlay { display: none; } /* Disable masking on mobile for performance */
 
-    /* Computer Showcase */
     #computer-showcase { height: 180vh; }
     .showcase-layout { flex-direction: column; justify-content: flex-start; gap: 20px; }
     .intro-text { position: relative; width: 100%; left: 0; text-align: center; transform: translateY(20px); margin-bottom: 0; }
     .intro-text h2 { font-size: 2.2rem; }
     #computer-canvas-container { height: 50vh; width: 100%; margin-top: -50px; }
 
-    /* Skills */
     #skills { height: auto; padding-bottom: 60px; }
     .sticky-wrapper { position: relative; height: auto; padding-top: 50px; }
     #canvas-container { height: 40vh; margin: 20px 0; }
@@ -214,7 +193,6 @@ section {
     .tool-card { position: relative; top: 0; max-height: none; opacity: 1; padding-top: 10px; background: transparent; }
     .tool-name { border: none; padding-bottom: 5px; color: var(--accent); opacity: 1; }
 
-    /* Experience Journey */
     #experience-works { height: auto; padding: 80px 0; }
     .journey-layout { display: flex; flex-direction: column !important; height: auto !important; gap: 40px; }
     .journey-text-side { width: 100% !important; text-align: center; padding: 0; }
@@ -226,14 +204,12 @@ section {
     .nav-item-side::before { display: none; }
     #journey-3d-container { width: 100% !important; height: 300px !important; position: relative !important; order: -1; }
 
-    /* Raket Showcase */
     .raket-container { flex-direction: column; gap: 30px; }
     .mac-window { width: 100%; }
     .scrollable-mockup { height: 300px; }
     .raket-description { width: 100%; text-align: center; }
     .raket-description h4 { font-size: 1.8rem; }
 
-    /* Contact */
     .contact-layout { flex-direction: column; gap: 40px; }
     .contact-info { width: 100%; text-align: center; align-items: center; }
     .contact-form-container { width: 100%; padding: 30px 20px; }
