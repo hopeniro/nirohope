@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Niro Hope</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <section id="home" class="hero-section">
+        <img src="img/digicam.png" class="float-img" style="top: 15%; left: 10%; --base-rot: -10deg; animation-delay: 0s;">
+        <img src="img/heart.png" class="float-img" style="top: 60%; left: 8%; --base-rot: 0deg; animation-delay: 0.5s;">
+        <img src="img/heart2.png" class="float-img" style="top: 20%; right: 12%; --base-rot: 0deg; animation-delay: 1s;">
+        <img src="img/ipad.png" class="float-img" style="bottom: 15%; right: 5%; --base-rot: -8deg; animation-delay: 1.5s;">
+        <img src="img/heart.png" class="float-img" style="bottom: 20%; left: 25%; width: 80px; --base-rot: 0deg; animation-delay: 0.2s;">
+        <img src="img/heart2.png" class="float-img" style="top: 10%; right: 30%; width: 60px; --base-rot: 0deg; animation-delay: 0.8s;">
+        <img src="img/pen.png" class="float-img" style="bottom: 30%; right: 20%; --base-rot: 15deg; animation-delay: 1.2s;">
+
+        <div class="hero-content">
+            <p class="welcome-tag">WELCOME TO MY SPACE</p>
+            <h1 class="name-container" id="full-name">MARY HOPE ASIS NIRO</h1>
+            <div class="nickname-display">"Hope"</div>
+            <p class="creative-tag">Creative Designer</p>
+        </div>
+    </section>
+    <section id="computer-showcase">
+        <div class="computer-sticky">
+            <div class="showcase-layout">
+                <div class="intro-text" id="pc-intro">
+                    <h2 class="squish-title">Hi, I'm Hope!</h2>
+                    <p>A dedicated creative designer focused on crafting visual stories and digital experiences. This is my personal archive where art meets digital innovation.</p>
+                </div>
+                <div id="computer-canvas-container"></div>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="sticky-wrapper">
+            <h2 class="section-title squish-title">Design and Digital Art Tools</h2>
+            <div id="canvas-container"></div>
+            <div class="tool-labels" id="labels">
+                <div class="tool-wrapper">
+                    <p class="tool-name">Canva</p>
+                    <div class="tool-card">
+                        <span class="level">Experienced</span>
+                        <p class="usage">For multimedia designs</p>
+                    </div>
+                </div>
+                <div class="tool-wrapper">
+                    <p class="tool-name">Blender</p>
+                    <div class="tool-card">
+                        <span class="level">Beginner</span>
+                        <p class="usage">For 3D models</p>
+                    </div>
+                </div>
+                <div class="tool-wrapper">
+                    <p class="tool-name">Adobe Photoshop</p>
+                    <div class="tool-card">
+                        <span class="level">Beginner</span>
+                        <p class="usage">For photo editing</p>
+                    </div>
+                </div>
+                <div class="tool-wrapper">
+                    <p class="tool-name">ibisPaint X</p>
+                    <div class="tool-card">
+                        <span class="level">Experienced</span>
+                        <p class="usage">For digital art</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="experience-works">
+        <div class="journey-layout">
+            <div class="journey-text-side">
+                <div class="journey-overlay-container">
+                    <div class="journey-overlay" id="overlay-0">
+                        <h3 class="squish-title">Digital Art</h3>
+                        <p>I use ibisPaint X for my hand-drawn digital artworks, bringing creative concepts to life through detailed and expressive illustrations.</p>
+                    </div>
+                    <div class="journey-overlay" id="overlay-1">
+                        <h3 class="squish-title">Graphic Design</h3>
+                        <p>As an OJT intern at <a href="https://techstacksph.com" target="_blank">Techstacks</a>, I utilize Canva to create visual assets and layouts that support the company's branding and marketing communications.</p>
+                    </div>
+                    <div class="journey-overlay" id="overlay-2">
+                        <h3 class="squish-title">Photo Editing</h3>
+                        <p>My work focuses on professional color grading, photo enhancements, and developing artistic edits to elevate the aesthetic quality of every shot.</p>
+                    </div>
+                </div>
+
+                <nav class="journey-nav-side">
+                    <div class="nav-item-side" onclick="handleJourneyNav(0, true)" id="nav-0">Digital Art</div>
+                    <div class="nav-item-side" onclick="handleJourneyNav(1, true)" id="nav-1">Graphic Design</div>
+                    <div class="nav-item-side" onclick="handleJourneyNav(2, true)" id="nav-2">Photo Editing</div>
+                </nav>
+            </div>
+
+            <div id="journey-3d-container"></div>
+        </div>
+    </section>
+    <section id="raket-showcase">
+        <div class="raket-container reveal">
+            <div class="mac-window">
+                <div class="window-header">
+                    <div class="window-buttons">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <a href="https://www.raket.ph/snowming" target="_blank" class="window-title">raket.ph/snowming</a>
+                </div>
+                <div class="window-content scrollable-mockup">
+                    <img src="img/raketph.png" alt="Raket.ph Showcase">
+                </div>
+            </div>
+            <div class="raket-description">
+                <h4 class="squish-title">Digital Marketplace Journey</h4>
+                <p>In 2024, I ventured into selling digital products on Raket.ph. My shop featured self-published coloring books, posters, and custom poster designs. I actively marketed these products across Instagram, Pinterest, and Facebook to reach a wider audience of art enthusiasts.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-layout reveal">
+            <div class="contact-info">
+                <h2 class="contact-title squish-title">Let's Connect</h2>
+                <p class="contact-desc">
+                    Interested in my work or have a project in mind? Feel free to reach out through this form or send an email directly. I'd love to hear from you!
+                </p>
+                <div id="heart-glitter-container"></div>
+            </div>
+            <div class="contact-form-container">
+                <form action="https://formspree.io/f/mlgojjze" method="POST" id="myContactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="form-name">Name</label>
+                        <input type="text" name="name" id="form-name" placeholder="Your Name" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-email">Email</label>
+                        <input type="email" name="email" id="form-email" placeholder="Your Email" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-message">Message</label>
+                        <textarea name="message" id="form-message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                    <p id="thank-you-msg" style="display: none;">Thank you for your message!</p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
